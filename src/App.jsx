@@ -60,7 +60,8 @@ I believe that every experience offers an opportunity to learn something valuabl
   <div>
     <h2>Contact Me</h2>
     
-    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+    <form className="contact-form" onSubmit={(e) => { e.preventDefault(); e.target.reset(); }}>
+
       <div className="form-group">
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required />
